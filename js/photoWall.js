@@ -50,6 +50,7 @@ photo = {
             </div>`;
     }
     $(".ImageGrid").append(li);
+    lozad()
     this.minigrid();
   },
   minigrid: function () {
