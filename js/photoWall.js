@@ -45,8 +45,8 @@ photo = {
                     data-caption="${imgName}" title="${imgName}">
                       <img  class="lazyload" data-src="${imgPath}${imgNameWithPattern}"
                       src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                      lazyload="auto"
-                      onload="lzld(this)">
+                      onload="lzld(this)"
+                      lazyload="auto">
                   </a>
                 </div>
             </div>`;

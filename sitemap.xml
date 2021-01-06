@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.aigisss.com/blog/photos/index.html</loc>
+    
+    <lastmod>2021-01-06</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.aigisss.com/blog/about/index.html</loc>
     
     <lastmod>2021-01-05</lastmod>
@@ -17,13 +24,6 @@
   
   <url>
     <loc>https://www.aigisss.com/blog/posts/d673e1b7.html</loc>
-    
-    <lastmod>2020-12-31</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.aigisss.com/blog/photos/index.html</loc>
     
     <lastmod>2020-12-31</lastmod>
     
