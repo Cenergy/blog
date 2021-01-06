@@ -44,13 +44,13 @@ photo = {
                   <a data-fancybox="gallery" href="${imgPath}${imgNameWithPattern}"
                     data-caption="${imgName}" title="${imgName}">
                       <img  class="lazyload" data-src="${imgPath}${imgNameWithPattern}"
-                      src="${imgPath}${imgNameWithPattern}">
+                      src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                      onload="lzld(this)">
                   </a>
                 </div>
             </div>`;
     }
     $(".ImageGrid").append(li);
-    lozad()
     this.minigrid();
   },
   minigrid: function () {
