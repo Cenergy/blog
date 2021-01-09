@@ -2,14 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://www.aigisss.com/blog/photos/index.html</loc>
+    <loc>https://www.aigisss.com/blog/photos/photoslist.json</loc>
     
     <lastmod>2021-01-09</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.aigisss.com/blog/photos/photos.json</loc>
+    <loc>https://www.aigisss.com/blog/photos/index.html</loc>
     
     <lastmod>2021-01-09</lastmod>
     
