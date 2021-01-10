@@ -16,14 +16,14 @@
   </url>
   
   <url>
-    <loc>https://www.aigisss.com/blog/photos/photos.json</loc>
+    <loc>https://www.aigisss.com/blog/photos/index.html</loc>
     
     <lastmod>2021-01-10</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.aigisss.com/blog/photos/index.html</loc>
+    <loc>https://www.aigisss.com/blog/photos/photos.json</loc>
     
     <lastmod>2021-01-10</lastmod>
     
@@ -613,6 +613,20 @@
   </url>
   
   <url>
+    <loc>https://www.aigisss.com/blog/tags/hexo/</loc>
+    <lastmod>2021-01-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.aigisss.com/blog/tags/fluid/</loc>
+    <lastmod>2021-01-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.aigisss.com/blog/tags/mapbox/</loc>
     <lastmod>2021-01-10</lastmod>
     <changefreq>daily</changefreq>
@@ -677,20 +691,6 @@
   
   <url>
     <loc>https://www.aigisss.com/blog/tags/webpack/</loc>
-    <lastmod>2021-01-10</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.aigisss.com/blog/tags/hexo/</loc>
-    <lastmod>2021-01-10</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.aigisss.com/blog/tags/fluid/</loc>
     <lastmod>2021-01-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
