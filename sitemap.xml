@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.aigisss.com/blog/posts/798ba833.html</loc>
+    
+    <lastmod>2021-01-11</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.aigisss.com/blog/photos/index.html</loc>
     
     <lastmod>2021-01-11</lastmod>
@@ -10,13 +17,6 @@
   
   <url>
     <loc>https://www.aigisss.com/blog/photos/photos.json</loc>
-    
-    <lastmod>2021-01-10</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.aigisss.com/blog/posts/798ba833.html</loc>
     
     <lastmod>2021-01-10</lastmod>
     
@@ -247,14 +247,14 @@
   </url>
   
   <url>
-    <loc>https://www.aigisss.com/blog/posts/shaderglossary.html</loc>
+    <loc>https://www.aigisss.com/blog/posts/26a3b371.html</loc>
     
     <lastmod>2021-01-10</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.aigisss.com/blog/posts/26a3b371.html</loc>
+    <loc>https://www.aigisss.com/blog/posts/shaderglossary.html</loc>
     
     <lastmod>2021-01-10</lastmod>
     
@@ -494,6 +494,13 @@
 
   
   <url>
+    <loc>https://www.aigisss.com/blog/tags/%E6%80%BB%E7%BB%93/</loc>
+    <lastmod>2021-01-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.aigisss.com/blog/tags/JavaScript/</loc>
     <lastmod>2021-01-11</lastmod>
     <changefreq>daily</changefreq>
@@ -502,13 +509,6 @@
   
   <url>
     <loc>https://www.aigisss.com/blog/tags/javascript/</loc>
-    <lastmod>2021-01-11</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.aigisss.com/blog/tags/%E6%80%BB%E7%BB%93/</loc>
     <lastmod>2021-01-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -655,14 +655,14 @@
   </url>
   
   <url>
-    <loc>https://www.aigisss.com/blog/tags/%E5%BB%BA%E7%AB%99/</loc>
+    <loc>https://www.aigisss.com/blog/tags/%E7%9D%80%E8%89%B2%E5%99%A8%E4%B9%8B%E4%B9%A6/</loc>
     <lastmod>2021-01-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://www.aigisss.com/blog/tags/%E7%9D%80%E8%89%B2%E5%99%A8%E4%B9%8B%E4%B9%A6/</loc>
+    <loc>https://www.aigisss.com/blog/tags/%E5%BB%BA%E7%AB%99/</loc>
     <lastmod>2021-01-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
