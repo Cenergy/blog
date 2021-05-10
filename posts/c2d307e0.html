@@ -1,0 +1,654 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/blog/img/favicon.png">
+  <link rel="icon" href="/blog/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="真正的伟大,即在于以脆弱的凡人之躯而具有神性的不可战胜。">
+  <meta name="author" content="Hai">
+  <meta name="keywords" content="爱即是诗,blog">
+  
+  <title>重学前端总结 - AIGISSS</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/blog/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/tomorrow-night.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/blog/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+  
+<link rel="stylesheet" href="/blog/styles/style.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"www.aigisss.com","root":"/blog/","version":"1.8.10","typing":{"enable":true,"typeSpeed":70,"cursorChar":"✦","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":200}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":"e57601b965796b6bd88329a0ca1e8b5e","google":147234769,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"diTi74ah5rpPDNa6bjS0VjqN-gzGzoHsz","app_key":"nHbjOKICQKYQtsVVJjeHYl0O","server_url":"https://diti74ah.lc-cn-n1-shared.com"}}};
+  </script>
+  <script  src="/blog/js/utils.js" ></script>
+  <script  src="/blog/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body><!-- hexo injector body_begin start --><div id="web_bg"></div><!-- hexo injector body_begin end -->
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/blog/">&nbsp;<strong>AIGISSS</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" target="_blank" rel="noopener external nofollow noreferrer" href="http://aigisss.com">
+                <i class="iconfont icon-google-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/">
+                <i class="iconfont icon-home-fill"></i>
+                博客
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" target="_self" role="button"
+                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont icon-books"></i>
+                文章
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/blog/archives/">
+                    <i class="iconfont icon-archive-fill"></i>
+                    归档
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/blog/categories/">
+                    <i class="iconfont icon-category-fill"></i>
+                    分类
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/blog/tags/">
+                    <i class="iconfont icon-tags-fill"></i>
+                    标签
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/photos/">
+                <i class="iconfont icon-image"></i>
+                相册
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('https://static.zcool.cn/v1.1.92/passport4.0/images/login-ground.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="重学前端总结">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-02-27 11:42" pubdate>
+        2021年2月27日 中午
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      1.8k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      21
+       分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- LeanCloud 统计文章PV -->
+      <span id="leancloud-page-views-container" class="post-meta" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="leancloud-page-views"></span> 次
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">重学前端总结</h1>
+            
+              <p class="note note-info">
+                
+                  本文最后更新于：11 天前
+                
+              </p>
+            
+            <div class="markdown-body">
+              <h2 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h2><h3 id="关于类型，有哪些你不知道的细节？"><a href="#关于类型，有哪些你不知道的细节？" class="headerlink" title="关于类型，有哪些你不知道的细节？"></a>关于类型，有哪些你不知道的细节？</h3><p>JavaScript 语言的每一个值都属于某一种数据类型。JavaScript 语言规定了 7 种语言类型。语言类型广泛用于变量、函数参数、表达式、函数返回值等场合。根据最新的语言标准，这 7 种语言类型是：</p>
+<ul>
+<li><code>Undefined</code>、<code>Null</code>、<code>Boolean</code>、<code>String</code>、<code>Number</code>、<code>Symbol</code>。（ES2020新增了<code>Bigint</code>）</li>
+<li><code>Object</code>。</li>
+</ul>
+<h3 id="Undefined、Null"><a href="#Undefined、Null" class="headerlink" title="Undefined、Null"></a>Undefined、Null</h3><p>任何变量在赋值前是 <code>Undefined</code> 类型、值为 <code>undefined</code>，一般我们可以用全局变量 <code>undefined</code>（就是名为 <code>undefined</code> 的这个变量）来表达这个值，或者 <code>void</code> 运算来把任意一个表达式变成 <code>undefined</code> 值。<br><code>Undefined</code> 跟 <code>Null</code> 有一定的表意差别，<code>Null</code> 表示的是：“定义了但是为空”。所以，在实际编程时，我们一般不会把变量赋值为 <code>undefined</code>，这样可以保证所有值为 <code>undefined</code> 的变量，都是从未赋值的自然状态。<br><code>Null</code> 类型也只有一个值，就是 <code>null</code>，它的语义表示空值，与 <code>undefined</code> 不同，<code>null</code> 是 <code>JavaScript</code> 关键字，所以在任何代码中，你都可以放心用 <code>null</code> 关键字来获取 <code>null</code> 值。</p>
+<h3 id="Boolean"><a href="#Boolean" class="headerlink" title="Boolean"></a>Boolean</h3><p>Boolean 类型有两个值， true 和 false，它用于表示逻辑意义上的真和假，同样有关键字 true 和 false 来表示两个值。这个类型很简单，我就不做过多介绍了。</p>
+<h3 id="String"><a href="#String" class="headerlink" title="String"></a>String</h3><p>我们来看看字符串是否有最大长度。<code>String</code> 用于表示文本数据。<code>String</code> 有最大长度是 2^53 - 1，这在一般开发中都是够用的，但是有趣的是，这个所谓最大长度，并不完全是你理解中的字符数。因为 <code>String</code> 的意义并非“字符串”，而是字符串的 <code>UTF16</code> 编码，我们字符串的操作 <code>charAt</code>、<code>charCodeAt</code>、<code>length</code> 等方法针对的都是 <code>UTF16</code> 编码。所以，字符串的最大长度，实际上是受字符串的编码长度影响的。Note：现行的字符集国际标准，字符是以 <code>Unicode</code> 的方式表示的，每一个 <code>Unicode</code> 的码点表示一个字符，理论上，<code>Unicode</code> 的范围是无限的。UTF 是 <code>Unicode</code> 的编码方式，规定了码点在计算机中的表示方法，常见的有 <code>UTF16</code> 和 UTF8。 <code>Unicode</code> 的码点通常用 U+??? 来表示，其中 ??? 是十六进制的码点值。 0-65536（U+0000 - U+FFFF）的码点被称为基本字符区域（BMP）。<code>JavaScript</code> 中的字符串是永远无法变更的，一旦字符串构造出来，无法用任何方式改变字符串的内容，所以字符串具有值类型的特征。<code>JavaScript</code> 字符串把每个 <code>UTF16</code> 单元当作一个字符来处理，所以处理非 BMP（超出 U+0000 - U+FFFF 范围）的字符时，你应该格外小心。<code>JavaScript</code> 这个设计继承自 Java，最新标准中是这样解释的，这样设计是为了“性能和尽可能实现起来简单”。因为现实中很少用到 BMP 之外的字符。</p>
+<h3 id="Number"><a href="#Number" class="headerlink" title="Number"></a>Number</h3><p>下面，我们来说说 <code>Number</code> 类型。<code>Number</code> 类型表示我们通常意义上的“数字”。这个数字大致对应数学中的有理数，当然，在计算机中，我们有一定的精度限制。<code>JavaScript</code> 中的 <code>Number</code> 类型有 18437736874454810627(即 2^64-2^53+3) 个值。<code>JavaScript</code> 中的 <code>Number</code> 类型基本符合 IEEE 754-2008 规定的双精度浮点数规则，但是 <code>JavaScript</code> 为了表达几个额外的语言场景（比如不让除以 0 出错，而引入了无穷大的概念），规定了几个例外情况：NaN，占用了 9007199254740990，这原本是符合 IEEE 规则的数字；Infinity，无穷大；-Infinity，负无穷大。</p>
+<p>根据双精度浮点数的定义，<code>Number</code> 类型中有效的整数范围是 -0x1fffffffffffff 至 0x1fffffffffffff，所以 <code>Number</code> 无法精确表示此范围外的整数。同样根据浮点数的定义，非整数的 <code>Number</code> 类型无法用 ==（=== 也不行） 来比较，一段著名的代码，这也正是我们第三题的问题，为什么在 <code>JavaScript</code> 中，0.1+0.2 不能 =0.3：</p>
+<p>正确的比较方法是使用 <code>JavaScript</code> 提供的最小精度值：</p>
+<figure class="highlight js"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs js"><span class="hljs-built_in">console</span>.log( <span class="hljs-built_in">Math</span>.abs(<span class="hljs-number">0.1</span> + <span class="hljs-number">0.2</span> - <span class="hljs-number">0.3</span>) &lt;= <span class="hljs-built_in">Number</span>.EPSILON);<br></code></pre></div></td></tr></table></figure>
+<h3 id="Symbol"><a href="#Symbol" class="headerlink" title="Symbol"></a>Symbol</h3><p>Symbol 是 ES6 中引入的新类型，它是一切非字符串的对象 key 的集合，在 ES6 规范中，整个对象系统被用 Symbol 重塑。在后面的文章中，我会详细叙述 Symbol 跟对象系统。这里我们只介绍 Symbol 类型本身：它有哪些部分，它表示什么意思，以及如何创建 Symbol 类型。Symbol 可以具有字符串类型的描述，但是即使描述相同，Symbol 也不相等。</p>
+<h3 id="Object"><a href="#Object" class="headerlink" title="Object"></a>Object</h3><p>Object 是 JavaScript 中最复杂的类型，也是 JavaScript 的核心机制之一。Object 表示对象的意思，它是一切有形和无形物体的总称。<br>在 JavaScript 中，对象的定义是“属性的集合”。属性分为数据属性和访问器属性，二者都是 key-value 结构，key 可以是字符串或者 Symbol 类型。<br>我们必须认识到 3 与 new Number(3) 是完全不同的值，它们一个是 Number 类型， 一个是对象类型。<br>Number、String 和 Boolean，三个构造器是两用的，当跟 new 搭配时，它们产生对象，当直接调用时，它们表示强制类型转换。Symbol 函数比较特殊，直接用 new 调用它会抛出错误，但它仍然是 Symbol 对象的构造器。</p>
+<h2 id="HTML-amp-CSS"><a href="#HTML-amp-CSS" class="headerlink" title="HTML&amp;CSS"></a>HTML&amp;CSS</h2><h2 id="浏览器实现原理与API"><a href="#浏览器实现原理与API" class="headerlink" title="浏览器实现原理与API"></a>浏览器实现原理与API</h2><h2 id="前端综合应用"><a href="#前端综合应用" class="headerlink" title="前端综合应用"></a>前端综合应用</h2><blockquote>
+<p>极好的Javascript面经<br><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/nieyafei/front-end-interview-js">https://github.com/nieyafei/front-end-interview-js</a><br>前端面试interview的Js题目收集 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/jimuyouyou/node-interview-questions">https://github.com/jimuyouyou/node-interview-questions</a><br>Node.js面试题，侧重后端应用与对Node核心的理解 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/paddingme/Front-end-Web-Development-Interview-Question">https://github.com/paddingme/Front-end-Web-Development-Interview-Question</a><br>前端开发面试题大收集 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/huruji/FE-Interview">https://github.com/huruji/FE-Interview</a><br>前端面试题大合集 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/CyC2018/CS-Notes">https://github.com/CyC2018/CS-Notes</a><br>技术面试必备基础知识 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/doocs/coding-interview">https://github.com/doocs/coding-interview</a><br>代码面试题集 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://zhuanlan.zhihu.com/p/57302141">https://zhuanlan.zhihu.com/p/57302141</a><br>大厂前端高频面试问题与答案精选 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://juejin.im/post/5c8f30606fb9a070ef60996d">https://juejin.im/post/5c8f30606fb9a070ef60996d</a><br>寒冬中的前端社招面试 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://zhuanlan.zhihu.com/p/53703176">https://zhuanlan.zhihu.com/p/53703176</a> Vue问得最多的面试题 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://juejin.im/post/5d13436f6fb9a07eca698ba0">https://juejin.im/post/5d13436f6fb9a07eca698ba0</a><br>你要的Vue面试题都在这里 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://juejin.im/post/5d153267e51d4510624f9809">https://juejin.im/post/5d153267e51d4510624f9809</a><br>vue 220+个知识点（面试题）为你保驾护航 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://juejin.im/entry/5d06ce32e51d4510a50335bd">https://juejin.im/entry/5d06ce32e51d4510a50335bd</a><br>[译] 送你 43 道 JavaScript 面试题 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://juejin.im/post/5d1d52aff265da1bb2774de0">https://juejin.im/post/5d1d52aff265da1bb2774de0</a><br>面试官到底想看什么样的简历？ <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/Advanced-Frontend/Daily-Interview-Question/blob/master/datum/summary.md">https://github.com/Advanced-Frontend/Daily-Interview-Question/blob/master/datum/summary.md</a><br>前端面试题及答案汇总 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/pwstrick/daily">https://github.com/pwstrick/daily</a><br>一份搜集的前端面试题目清单+面试相关的文章 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://segmentfault.com/a/1190000020181662">https://segmentfault.com/a/1190000020181662</a><br>Vue面试中，经常会被问到的面试题/知识点(2019改进版) <a target="_blank" rel="noopener external nofollow noreferrer" href="https://juejin.im/post/5d7596055188253e4b2f0c29">https://juejin.im/post/5d7596055188253e4b2f0c29</a><br>36 个JS 面试题为你助力金九银十(面试必读) <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/0voice/interview_internal_reference">https://github.com/0voice/interview_internal_reference</a><br>2019年最新总结，阿里，腾讯，百度，美团，头条等技术面试题目，以及答案，专家出题人分析汇总 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://juejin.im/entry/5db1c186518825646b111a4d">https://juejin.im/entry/5db1c186518825646b111a4d</a><br>2019年最新经典web前端面试题超全面细节 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://q.shanyue.tech/fe/">https://q.shanyue.tech/fe/</a> 前端面试题小记 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://q.shanyue.tech/interview.html">https://q.shanyue.tech/interview.html</a><br>前端大厂面经大全集 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://q.shanyue.tech/base/">https://q.shanyue.tech/base/</a><br>计算机基础面试题小计 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://fecommunity.github.io/front-end-interview/">https://fecommunity.github.io/front-end-interview/</a><br>前端工程师面试宝典 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://juejin.im/post/6893856813247266823">https://juejin.im/post/6893856813247266823</a> </p>
+</blockquote>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/blog/tags/Javascript/">Javascript</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/blog/posts/7d474f9c.html">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">一起学可视化</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/blog/posts/798ba833.html">
+                        <span class="hidden-mobile">hexo的fluid主题添加瀑布流懒加载相册功能</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <div id="waline"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#waline', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/@waline/client@0.14.8/dist/Waline.min.js', function () {
+        new Waline({
+          el: "#waline",
+          placeholder: "说点什么",
+          path: window.location.pathname,
+          avatar: "retro",
+          meta: ["nick","mail","link"],
+          pageSize: "10",
+          lang: "zh-CN",
+          highlight: true,
+          serverURL: "https://weline.aigisss.com",
+          avatarCDN: "",
+          avatarForce: false,
+          requiredFields: [],
+          emojiCDN: "",
+          emojiMaps: {},
+          anonymous: null,
+        });
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+  <div class="statistics">
+    
+    
+
+    
+      
+        <!-- LeanCloud 统计PV -->
+        <span id="leancloud-site-pv-container" style="display: none">
+            总访问量 
+            <span id="leancloud-site-pv"></span>
+             次
+          </span>
+      
+      
+        <!-- LeanCloud 统计UV -->
+        <span id="leancloud-site-uv-container" style="display: none">
+            总访客数 
+            <span id="leancloud-site-uv"></span>
+             人
+          </span>
+      
+
+    
+  </div>
+
+
+  
+  <!-- 备案信息 -->
+  <div class="beian">
+    <span>
+      <a href="http://beian.miit.gov.cn/" target="_blank" rel="nofollow noopener">
+        赣ICP备18013338-1号
+      </a>
+    </span>
+    
+  </div>
+
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":200})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/blog/js/events.js" ></script>
+<script  src="/blog/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/blog/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+
+  <script defer src="/blog/js/leancloud.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/blog/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/blog/local-search.xml";
+      $('#local-search-input').on('click', function() {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      });
+      $('#modalSearch').on('shown.bs.modal', function() {
+        $('#local-search-input').focus();
+      });
+    })()
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    <!-- Baidu Analytics -->
+    <script defer>
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?e57601b965796b6bd88329a0ca1e8b5e";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  
+
+  
+    <!-- Google Analytics -->
+    <script defer>
+      window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) };
+      ga.l = +new Date;
+      ga('create', '147234769', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+  
+<script src="/blog/js/custom.js"></script>
+<script src="/blog/js/test.js"></script>
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/blog/js/boot.js" ></script>
+
+
+<!-- hexo injector body_end start --><link defer rel="stylesheet" href="/blog/styles/customize.css" />
+  <script src="/blog/js/backgroundize.js"></script>
+  <link defer rel="stylesheet" href="/blog/styles/backgroundize.css" />
+  <script src="/blog/js/banner.js"></script>
+    <script src="/blog/js/snow.js"></script>
+  <link defer rel="stylesheet" href="/blog/styles/banner.css" />
+  
+  <script data-pjax src="https://cdn.jsdelivr.net/gh/Zfour/hexo-github-calendar@1.21/hexo_githubcalendar.js"></script>
+  <script data-pjax>
+        function GithubCalendarConfig(){
+            var git_githubapiurl ="https://python-github-calendar-api.vercel.app/api?cenergy";
+            var git_color =['#ebedf0', '#fdcdec', '#fc9bd9', '#fa6ac5', '#f838b2', '#f5089f', '#c4067e', '#92055e', '#540336', '#48022f', '#30021f'];
+            var git_user ="cenergy";
+            var parent_div_git = document.getElementById('recent-posts');
+            var git_div_html = '<div class="recent-post-item" style="width:100%;height:auto;padding:10px;"><div id="github_loading" style="width:10%;height:100%;margin:0 auto;display: block"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  viewBox="0 0 50 50" style="enable-background:new 0 0 50 50" xml:space="preserve"><path fill="#d0d0d0" d="M25.251,6.461c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615V6.461z" transform="rotate(275.098 25 25)"><animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="0.6s" repeatCount="indefinite"></animateTransform></path></svg></div><div id="github_container"></div></div>';
+            if(parent_div_git && location.pathname =='/blog/about/'){
+                console.log('已挂载github calendar')
+                // parent_div_git.innerHTML=git_div_html+parent_div_git.innerHTML // 无报错，但不影响使用(支持pjax跳转)
+                parent_div_git.insertAdjacentHTML("afterbegin",git_div_html) // 有报错，但不影响使用(支持pjax跳转)
+            };
+            GithubCalendar(git_githubapiurl,git_color,git_user)
+        }
+        if(document.getElementById('recent-posts')){
+            GithubCalendarConfig()
+        }
+    </script>
+    <style>#github_container{min-height:280px}@media screen and (max-width:650px) {#github_container{background-image:;min-height:0px}}</style>
+    <style></style><!-- hexo injector body_end end --></body>
+</html>
