@@ -229,7 +229,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      963 字
+      1.2k 字
     </span>
   
 
@@ -239,7 +239,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      12
+      17
        分钟
     </span>
   
@@ -281,7 +281,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：3 分钟前
+                  本文最后更新于：1 小时前
                 
               </p>
             
@@ -299,6 +299,27 @@
 <h3 id="修改cmd配置文件后重新载入"><a href="#修改cmd配置文件后重新载入" class="headerlink" title="修改cmd配置文件后重新载入"></a>修改cmd配置文件后重新载入</h3><figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">supervisorctl reread<br>supervisorctl update<br>supervisorctl restart somecmd<br><br></code></pre></div></td></tr></table></figure>
 <h3 id="修改-etc-supervisor-supervisord-conf后重新载入"><a href="#修改-etc-supervisor-supervisord-conf后重新载入" class="headerlink" title="修改/etc/supervisor/supervisord.conf后重新载入"></a>修改/etc/supervisor/supervisord.conf后重新载入</h3><figure class="highlight shell"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs shell">supervisorctl reload<br></code></pre></div></td></tr></table></figure>
 <h3 id="一些其他可能用到的命令"><a href="#一些其他可能用到的命令" class="headerlink" title="一些其他可能用到的命令"></a>一些其他可能用到的命令</h3><figure class="highlight shell"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs shell">supervisorctl start programname      启动某个进程  <br>supervisorctl stop programname       停止某个进程<br>supervisorctl restart programname    重启某个进程<br>supervisorctl start all     启动全部进程<br>supervisorctl stop all      停止全部进程，注：start、restart、stop都不会载入最新的配置文件。<br>supervisorctl status        查看状态<br>supervisorctl shutdown      关闭supervisor<br></code></pre></div></td></tr></table></figure>
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h3 id="Django-uWsgi-supervisor"><a href="#Django-uWsgi-supervisor" class="headerlink" title="Django+uWsgi+supervisor"></a>Django+uWsgi+supervisor</h3><ul>
+<li>uWsgi配置</li>
+</ul>
+<figure class="highlight sh"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sh">[uwsgi]<br><span class="hljs-comment"># Django-related settings</span><br><span class="hljs-comment">#uwsgi 备注</span><br><span class="hljs-comment"># start ===&gt; uwsgi --ini /hainergy/script/uwsgi.ini</span><br><span class="hljs-comment"># reload ===&gt; uwsgi --reload /hainergy/pidfile/uwsgi.pid</span><br><span class="hljs-comment"># stop ===&gt; uwsgi --stop /hainergy/pidfile/uwsgi.pid</span><br><br><span class="hljs-comment"># the base directory (full path)</span><br>home = /root/.virtualenvs/py38<br><span class="hljs-built_in">chdir</span> = /home/web/dogdog<br>module = dogdog.wsgi:application<br><span class="hljs-comment"># master</span><br>master = True<br>pidfile=/hainergy/pidfile/uwsgi.pid<br><span class="hljs-comment"># daemonize = /hainergy/log/uwsgi.log</span><br><span class="hljs-comment"># logto = /hainergy/log/uwsgi.log</span><br><span class="hljs-comment"># maximum number of worker processes</span><br>processes = 10<br><span class="hljs-comment"># the socket (use the full path to be safe)</span><br>socket = 127.0.0.1:9999         <span class="hljs-comment"># 云服务器内部ip</span><br>uid = root<br>gid = root<br>workers = 1<br>reload-mercy = 10<br><span class="hljs-comment"># clear environment on exit</span><br>vacuum = True<br>max-requests = 1000<br><span class="hljs-comment"># max virtual</span><br>limit-as = 1024   <br>reload-on-as =1024<br>buffer-size = 30000<br><span class="hljs-comment">#py-autoreload=1</span><br></code></pre></div></td></tr></table></figure>
+<ul>
+<li>nginx</li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs ini">location /static&#123;<br>  alias /home/web/doggo/static;<br>&#125;	<br><br>location /media &#123;<br>  alias /home/web/doggo/media;<br>&#125;<br><br>location / &#123;<br>  include /usr/local/nginx/conf/uwsgi_params;<br>  uwsgi_pass 127.0.0.1:9999;<br>  <span class="hljs-comment"># index  templates/talk.html talk.htm;</span><br>&#125;<br></code></pre></div></td></tr></table></figure>
+<ul>
+<li>supervisor</li>
+</ul>
+<figure class="highlight ini"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs ini"><span class="hljs-section">[program:djangogo]</span><br><span class="hljs-attr">command</span>=/usr/local/python3/bin/uwsgi --ini /hainergy/script/uwsgi.ini<br><span class="hljs-attr">user</span>=root<br><span class="hljs-attr">autorestart</span>=<span class="hljs-literal">true</span><br><span class="hljs-attr">autostart</span>=<span class="hljs-literal">true</span><br><span class="hljs-attr">startretries</span>=<span class="hljs-number">3</span><br><span class="hljs-attr">redirect_stderr</span>=<span class="hljs-literal">true</span><br><span class="hljs-attr">startsecs</span>=<span class="hljs-number">5</span><br><span class="hljs-attr">stdout_logfile</span>=/hainergy/log/aigisss.log<br><span class="hljs-attr">stopasgroup</span>=<span class="hljs-literal">true</span><br><span class="hljs-attr">killasgroup</span>=<span class="hljs-literal">true</span><br><span class="hljs-attr">priority</span>=<span class="hljs-number">999</span><br></code></pre></div></td></tr></table></figure>
+<h3 id="Django-django-q"><a href="#Django-django-q" class="headerlink" title="Django+django_q"></a>Django+django_q</h3><ul>
+<li>supervisor </li>
+</ul>
+<figure class="highlight ini"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs ini"><span class="hljs-section">[program:qcluster]</span><br><span class="hljs-attr">directory</span>=/home/web/doggo<br><span class="hljs-attr">command</span>=/root/.virtualenvs/aigisss_py/bin/python manage.py qcluster<br><span class="hljs-attr">stopasgroup</span> = <span class="hljs-literal">true</span><br><span class="hljs-attr">user</span>=root<br><span class="hljs-attr">stdout_logfile</span>=/hainergy/log/qcluster.log<br></code></pre></div></td></tr></table></figure>
+<h3 id="node-supercisor"><a href="#node-supercisor" class="headerlink" title="node+supercisor"></a>node+supercisor</h3><ul>
+<li>supervisor</li>
+</ul>
+<figure class="highlight ini"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs ini"><span class="hljs-section">[program:tilemap]</span><br><span class="hljs-attr">directory</span>=/home/server/mbserver<br><span class="hljs-attr">command</span>=/usr/local/nodejs/bin/pm2 start app.js<br><span class="hljs-attr">user</span>=root<br><span class="hljs-attr">autorestart</span>=<span class="hljs-literal">true</span><br><span class="hljs-attr">autostart</span>=<span class="hljs-literal">true</span><br><span class="hljs-attr">startretries</span>=<span class="hljs-number">3</span><br><span class="hljs-attr">redirect_stderr</span>=<span class="hljs-literal">true</span><br><span class="hljs-attr">startsecs</span>=<span class="hljs-number">5</span><br><span class="hljs-attr">stdout_logfile</span>=/hainergy/log/tilemap.log<br><span class="hljs-attr">stopasgroup</span>=<span class="hljs-literal">true</span><br><span class="hljs-attr">killasgroup</span>=<span class="hljs-literal">true</span><br><span class="hljs-attr">priority</span>=<span class="hljs-number">999</span><br></code></pre></div></td></tr></table></figure>
+
             </div>
             <hr>
             <div>
