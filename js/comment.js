@@ -1,7 +1,1 @@
-const container = $(".container-fluid #board-ctn .post-content");
-const [targetDom = null] = container;
-if (targetDom) {
-  const div = document.createElement("div");
-  div.innerHTML = `<br><div id="waline"></div>`;
-  targetDom.append(div);
-}
+const container=$(".container-fluid #board-ctn .post-content"),[targetDom=null]=container;if(targetDom){const n=document.createElement("div");n.innerHTML='<br><div id="waline"></div>',targetDom.append(n)}

@@ -1,7 +1,1 @@
-window.onload = function () {
-  const bg = document.querySelector("#web_bg");
-  const div = document.createElement("div");
-  div.innerHTML = "<p>123456789</p>";
-  bg.append(div);
-  console.log("Go: window.onload -> bg", bg);
-};
+window.onload=function(){const o=document.querySelector("#web_bg"),n=document.createElement("div");n.innerHTML="<p>123456789</p>",o.append(n),console.log("Go: window.onload -> bg",o)};
