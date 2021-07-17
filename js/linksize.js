@@ -1,0 +1,1 @@
+window.onload=function(){const o=document.querySelector("#web_bg"),n=document.createElement("div");n.innerHTML="<p>123456789</p>",o.append(n),console.log("Go: window.onload -> bg",o)};

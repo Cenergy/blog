@@ -1,0 +1,681 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://aigisss.com/media/icons/favicon.png">
+  <link rel="icon" href="https://aigisss.com/media/icons/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="真正的伟大,即在于以脆弱的凡人之躯而具有神性的不可战胜。">
+  <meta name="author" content="Hai">
+  <meta name="keywords" content="爱即是诗,blog">
+  
+  <title>使用 Rainbow 展示随机的英语句子 - AIGISSS</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/blog/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.7.2/styles/tomorrow-night.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/blog/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+  
+<link rel="stylesheet" href="/blog/styles/style.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"www.aigisss.com","root":"/blog/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":"✦","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":200}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":"e57601b965796b6bd88329a0ca1e8b5e","google":147234769,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"diTi74ah5rpPDNa6bjS0VjqN-gzGzoHsz","app_key":"nHbjOKICQKYQtsVVJjeHYl0O","server_url":"https://diti74ah.lc-cn-n1-shared.com"}},"search_path":"/blog/local-search.xml"};
+  </script>
+  <script  src="/blog/js/utils.js" ></script>
+  <script  src="/blog/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body><!-- hexo injector body_begin start --><div id="web_bg"></div><!-- hexo injector body_begin end -->
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/blog/">&nbsp;<strong>AIGISSS</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" target="_blank" rel="noopener external nofollow noreferrer" href="http://aigisss.com">
+                <i class="iconfont icon-google-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/">
+                <i class="iconfont icon-home-fill"></i>
+                博客
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" target="_self" role="button"
+                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont icon-books"></i>
+                文章
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/blog/archives/">
+                    <i class="iconfont icon-archive-fill"></i>
+                    归档
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/blog/categories/">
+                    <i class="iconfont icon-category-fill"></i>
+                    分类
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/blog/tags/">
+                    <i class="iconfont icon-tags-fill"></i>
+                    标签
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/photos/">
+                <i class="iconfont icon-image"></i>
+                相册
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('https://static.zcool.cn/passport4.0/images/login-tommyp.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="使用 Rainbow 展示随机的英语句子">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2020-05-08 17:12" pubdate>
+        2020年5月8日 下午
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      880 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      10
+       分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- LeanCloud 统计文章PV -->
+      <span id="leancloud-page-views-container" class="post-meta" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="leancloud-page-views"></span> 次
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">使用 Rainbow 展示随机的英语句子</h1>
+            
+              <p class="note note-info">
+                
+                  本文最后更新于：5 个月前
+                
+              </p>
+            
+            <div class="markdown-body">
+              <div class="note note-success">
+            <p>本文由 Fluid 用户授权转载，版权归原作者所有。</p><p>本文作者：吃白饭<br>原文地址：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://eatrice.top/post/Rainbow/">https://eatrice.top/post/Rainbow/</a></p>
+          </div>
+<p>访问 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://rainbow.eatrice.top/">Rainbow</a> 吧！</p>
+<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>Rainbow - 一朵彩虹是 <code>EatRiceTeam</code>建立的一个旨在收集优美英语句子的一套网站。演示网站地址为：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://rainbow.eatrice.top/">https://rainbow.eatrice.top/</a></p>
+<p>我们希望能够与大家分享我们在日常的学习生活中遇到的优美的英语句子，希望它能像彩虹一样，美丽天空，温暖人心。</p>
+<p>其由<code>C#</code>开发，基于<code>ASP.NET Core 2.2</code>框架。包括<code>Web API</code>提供导出<code>JSON</code>的数据接口，和基于<code>MVC</code>的动态展示网站。</p>
+<h2 id="关于Rainbow"><a href="#关于Rainbow" class="headerlink" title="关于Rainbow"></a>关于Rainbow</h2><p>Rainbow 收集的英语句子的要求为：</p>
+<ol>
+<li>读起来感觉很优美的文章句子段落或诗歌节选；</li>
+<li>含义特别丰富且引人深思的鸡汤或哲学句子；</li>
+<li>句子奇怪，但意义完整且显得很有个性的电影台词；</li>
+<li>你特别喜欢，且引起你感情上共鸣的英语歌词。</li>
+</ol>
+<p>Rainbow 创建的初衷是替代我们的个人网站目前正在使用的 一言 ，我们希望自己能够自己定义一句话的意思和表现形式。目前句子库不是特别丰富，收集的资源有限，所以欢迎大家投稿，并发表自己的看法。</p>
+<h2 id="给Rainbow投稿"><a href="#给Rainbow投稿" class="headerlink" title="给Rainbow投稿"></a>给Rainbow投稿</h2><p>我们希望找到小伙伴们和我们一起充实我们的句子库，希望大家能够将自己珍藏的句子分享给我们：</p>
+<p><strong>投稿要求</strong>：</p>
+<ol>
+<li>提供完整的句子</li>
+<li>提供句子的作者</li>
+<li>提供句子的来源，如书名、文章名、电影名、歌曲名等。</li>
+</ol>
+<p>投稿方式：</p>
+<ol>
+<li><p><a href="mailto:qiqi@eatrice.top" rel="external nofollow noreferrer">EatRice的邮箱：qiqi@eatrice.top</a></p>
+</li>
+<li><p><a href="dipper.ruru@gmail.com">Courir的邮箱：dipper.ruru@gmail.com</a></p>
+</li>
+<li><p>在本页下方留言</p>
+</li>
+<li><p>好友QQ或微信直接发送</p>
+</li>
+</ol>
+<h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><h3 id="数据接口"><a href="#数据接口" class="headerlink" title="数据接口"></a>数据接口</h3><p>目前语句库饱含了三种类型的语句：reading、movies、songs</p>
+<p>需要从语句库中随机获得语句的<code>Json</code>格式的接口：<code>https://api.eatrice.top/</code></p>
+<p>需要按照三个单独分类请求语句的接口：<br><code>https://api.eatrice.top/reading/</code><br><code>https://api.eatrice.top/movies/</code><br><code>https://api.eatrice.top/songs/</code></p>
+<p>获取所有的句子接口：<code>https://api.eatrice.top/GetAll/</code></p>
+<p>需要根据语句ID请求语句的接口：<code>https://api.eatrice.top/?ID=10001</code><br>ID编号从10001开始增加，若该ID不存在则随机返回语句，同<code>https://api.eatrice.top/</code></p>
+<p>返回的数据格式如下：<br><figure class="highlight json"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs json">&#123;<br>    <span class="hljs-attr">&quot;Content&quot;</span>: <span class="hljs-string">&quot;Because I am your mom,It counts the most because I know you the most.&quot;</span>,<br>    <span class="hljs-attr">&quot;Author&quot;</span>: <span class="hljs-string">&quot;Stephen Chbosky&quot;</span>,<br>    <span class="hljs-attr">&quot;Source&quot;</span>: <span class="hljs-string">&quot;Wonder&quot;</span>,<br>    <span class="hljs-attr">&quot;ID&quot;</span>: <span class="hljs-string">&quot;10009&quot;</span><br>&#125;<br></code></pre></div></td></tr></table></figure><br>其中，<code>Content</code>为句子内容<br><code>Author</code>为句子作者<br><code>Source</code>为句子来源<br><code>ID</code>为句子ID</p>
+<h3 id="展示网站"><a href="#展示网站" class="headerlink" title="展示网站"></a>展示网站</h3><p>展示网站为 Rainbow 提供展示界面。和说明文档。</p>
+<p>Rainbow的展示网站为：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://rainbow.eatrice.top/">https://rainbow.eatrice.top/</a><br>欢迎大家访问和提供意见😊😊😊。</p>
+<p><img src="https://rmt.dogedoge.com/fetch/fluid/storage/hexo-rainbow/1.png?w=1280&amp;fmt=webp" srcset="/blog/img/loading.gif" lazyload alt="效果图"></p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>在需要添加 <code>rainbow</code> 的地方添加一个占位符:</p>
+<figure class="highlight html"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;rainbow&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&#x27;&#x27;</span>&gt;</span>🌈 获取中...<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><br></code></pre></div></td></tr></table></figure>
+<p>在申明div之后，搭配数据请求脚本</p>
+<figure class="highlight html"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript"></span><br><span class="javascript">fetch(<span class="hljs-string">&#x27;https://api.eatrice.top&#x27;</span>)</span><br><span class="javascript">  .then(<span class="hljs-function"><span class="hljs-params">response</span> =&gt;</span> response.json())</span><br><span class="javascript">  .then(<span class="hljs-function"><span class="hljs-params">data</span> =&gt;</span> &#123;</span><br><span class="javascript">    <span class="hljs-keyword">var</span> rainbow = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&#x27;rainbow&#x27;</span>);</span><br><span class="javascript">    rainbow.innerHTML = data.Content;</span><br><span class="javascript">    rainbow.href = <span class="hljs-string">&quot;https://rainbow.eatrice.top/?ID=&quot;</span> + data.ID;</span><br><span class="javascript">  &#125;)</span><br><span class="javascript">  .catch(<span class="hljs-built_in">console</span>.error)</span><br><span class="javascript"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br></code></pre></div></td></tr></table></figure>
+<p>就能在网站上看到你的 rainbow 啦！</p>
+<h2 id="开源"><a href="#开源" class="headerlink" title="开源"></a>开源</h2><p>项目已在<code>github</code>上开源</p>
+<ul>
+<li>项目地址：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/QiQiWan/rainbow/">https://github.com/QiQiWan/rainbow/</a></li>
+<li>项目仓库：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/QiQiWan/rainbow/">git@github.com:QiQiWan/rainbow.git</a></li>
+</ul>
+<h2 id="贡献者"><a href="#贡献者" class="headerlink" title="贡献者"></a>贡献者</h2><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://eatrice.top">EatRice-https://eatrice.top</a><br><a target="_blank" rel="noopener external nofollow noreferrer" href="https://ruru.eatrice.top">上屋顶看北斗七星-https://ruru.eatrice.top</a></p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/blog/categories/%E5%8A%9F%E8%83%BD%E5%A2%9E%E5%BC%BA/">功能增强</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/blog/tags/Hexo/">Hexo</a>
+                    
+                      <a class="hover-with-bg" href="/blog/tags/%E7%94%A8%E6%88%B7%E7%BB%8F%E9%AA%8C/">用户经验</a>
+                    
+                      <a class="hover-with-bg" href="/blog/tags/%E8%8A%B1%E9%87%8C%E8%83%A1%E5%93%A8/">花里胡哨</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/blog/posts/9604e2c7.html">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">搭配 Fluid 如何优雅的写一篇文章</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/blog/posts/9604e2c5.html">
+                        <span class="hidden-mobile">Hexo 暗黑模式</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <div id="waline"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#waline', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/@waline/client@0.16.2/dist/Waline.min.js', function() {
+        var options = Object.assign(
+          {"serverURL":"https://weline.aigisss.com","placeholder":"说点什么","path":"window.location.pathname","avatar":"retro","meta":["nick","mail","link"],"pageSize":10,"lang":"zh-CN","highlight":true,"avatarCDN":"","avatarForce":false,"requiredFields":[],"emojiCDN":null,"emojiMaps":null,"anonymous":null},
+          {
+            el: '#waline',
+            path: window.location.pathname
+          }
+        )
+        new Waline(options);
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+  <div class="statistics">
+    
+    
+
+    
+      
+        <!-- LeanCloud 统计PV -->
+        <span id="leancloud-site-pv-container" style="display: none">
+            总访问量 
+            <span id="leancloud-site-pv"></span>
+             次
+          </span>
+      
+      
+        <!-- LeanCloud 统计UV -->
+        <span id="leancloud-site-uv-container" style="display: none">
+            总访客数 
+            <span id="leancloud-site-uv"></span>
+             人
+          </span>
+      
+
+    
+  </div>
+
+
+  
+  <!-- 备案信息 -->
+  <div class="beian">
+    <span>
+      <a href="http://beian.miit.gov.cn/" target="_blank" rel="nofollow noopener">
+        赣ICP备18013338-1号
+      </a>
+    </span>
+    
+  </div>
+
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":200})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" ></script>
+<script  src="/blog/js/events.js" ></script>
+<script  src="/blog/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/blog/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.3/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.1/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/blog/js/local-search.js" ></script>
+
+
+
+
+  <script defer src="/blog/js/leancloud.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    <!-- Baidu Analytics -->
+    <script defer>
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?e57601b965796b6bd88329a0ca1e8b5e";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  
+
+  
+    <!-- Google Analytics -->
+    <script defer>
+      window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) };
+      ga.l = +new Date;
+      ga('create', '147234769', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+  
+<script src="/blog/js/custom.js"></script>
+<script src="/blog/js/test.js"></script>
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/blog/js/boot.js" ></script>
+
+
+<!-- hexo injector body_end start --><link defer rel="stylesheet" href="/blog/styles/customize.css" />
+  <script src="/blog/js/backgroundize.js"></script>
+  <link defer rel="stylesheet" href="/blog/styles/backgroundize.css" />
+  <script src="/blog/js/banner.js"></script>
+    <script src="/blog/js/snow.js"></script>
+  <link defer rel="stylesheet" href="/blog/styles/banner.css" />
+  
+  <script data-pjax src="https://cdn.jsdelivr.net/gh/Zfour/hexo-github-calendar@1.21/hexo_githubcalendar.js"></script>
+  <script data-pjax>
+        function GithubCalendarConfig(){
+            var git_githubapiurl ="https://python-github-calendar-api.vercel.app/api?cenergy";
+            var git_color =['#ebedf0', '#fdcdec', '#fc9bd9', '#fa6ac5', '#f838b2', '#f5089f', '#c4067e', '#92055e', '#540336', '#48022f', '#30021f'];
+            var git_user ="cenergy";
+            var parent_div_git = document.getElementById('recent-posts');
+            var git_div_html = '<div class="recent-post-item" style="width:100%;height:auto;padding:10px;"><div id="github_loading" style="width:10%;height:100%;margin:0 auto;display: block"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  viewBox="0 0 50 50" style="enable-background:new 0 0 50 50" xml:space="preserve"><path fill="#d0d0d0" d="M25.251,6.461c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615V6.461z" transform="rotate(275.098 25 25)"><animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="0.6s" repeatCount="indefinite"></animateTransform></path></svg></div><div id="github_container"></div></div>';
+            if(parent_div_git && location.pathname =='/blog/about/'){
+                console.log('已挂载github calendar')
+                // parent_div_git.innerHTML=git_div_html+parent_div_git.innerHTML // 无报错，但不影响使用(支持pjax跳转)
+                parent_div_git.insertAdjacentHTML("afterbegin",git_div_html) // 有报错，但不影响使用(支持pjax跳转)
+            };
+            GithubCalendar(git_githubapiurl,git_color,git_user)
+        }
+        if(document.getElementById('recent-posts')){
+            GithubCalendarConfig()
+        }
+    </script>
+    <style>#github_container{min-height:280px}@media screen and (max-width:650px) {#github_container{background-image:;min-height:0px}}</style>
+    <style></style><!-- hexo injector body_end end --></body>
+</html>
