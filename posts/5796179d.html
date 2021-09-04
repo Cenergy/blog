@@ -231,7 +231,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      600 字
+      592 字
     </span>
   
 
@@ -290,7 +290,7 @@
             <div class="markdown-body">
               <p><code>mapbox-gl</code>中的动画图片是不断请求服务器得来的，详情请看<a target="_blank" rel="noopener external nofollow noreferrer" href="https://docs.mapbox.com/mapbox-gl-js/example/animate-images/">地址</a>，虽然是实现了，但一直请求不是好的解决办法，特别还是<code>mapbox-gl</code>这种追求性能极致的来说。我们可以有多种解决方法。</p>
 <h2 id="方案一：使用updateImage来解决"><a href="#方案一：使用updateImage来解决" class="headerlink" title="方案一：使用updateImage来解决"></a>方案一：使用updateImage来解决</h2><p>首先还是加载图层资源。</p>
-<figure class="highlight js"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs js">map.addSource(<span class="hljs-string">&#x27;layerSourceName&#x27;</span>, &#123;<br>     <span class="hljs-attr">type</span>: <span class="hljs-string">&#x27;image&#x27;</span>,<br>     <span class="hljs-attr">url</span>: imageUrl,<br>     <span class="hljs-attr">coordinates</span>: coor, <span class="hljs-comment">//计算后的四至坐标</span><br>&#125;);<br></code></pre></div></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs js">map.addSource(<span class="hljs-string">&#x27;layerSourceName&#x27;</span>, &#123;<br>     <span class="hljs-attr">type</span>: <span class="hljs-string">&#x27;image&#x27;</span>,<br>     <span class="hljs-attr">url</span>: imageUrl,<br>     <span class="hljs-attr">coordinates</span>: coor,<br>&#125;);<br></code></pre></div></td></tr></table></figure>
 <p>然后加载这个资源到图层。</p>
 <p>最重要的来了，定时显示图片的环节。</p>
 <span id="more"></span>
