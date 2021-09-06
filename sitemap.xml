@@ -296,14 +296,14 @@
   </url>
   
   <url>
-    <loc>https://www.aigisss.com/blog/posts/3c0dd009.html</loc>
+    <loc>https://www.aigisss.com/blog/posts/shaderglossary.html</loc>
     
     <lastmod>2021-04-30</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.aigisss.com/blog/posts/shaderglossary.html</loc>
+    <loc>https://www.aigisss.com/blog/posts/3c0dd009.html</loc>
     
     <lastmod>2021-04-30</lastmod>
     
@@ -550,14 +550,14 @@
 
   
   <url>
-    <loc>https://www.aigisss.com/blog/tags/%E6%80%BB%E7%BB%93/</loc>
+    <loc>https://www.aigisss.com/blog/tags/JavaScript/</loc>
     <lastmod>2021-09-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://www.aigisss.com/blog/tags/JavaScript/</loc>
+    <loc>https://www.aigisss.com/blog/tags/%E6%80%BB%E7%BB%93/</loc>
     <lastmod>2021-09-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -627,6 +627,13 @@
   </url>
   
   <url>
+    <loc>https://www.aigisss.com/blog/tags/postgis/</loc>
+    <lastmod>2021-09-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.aigisss.com/blog/tags/%E7%94%A8%E6%88%B7%E7%BB%8F%E9%AA%8C/</loc>
     <lastmod>2021-09-06</lastmod>
     <changefreq>daily</changefreq>
@@ -648,7 +655,7 @@
   </url>
   
   <url>
-    <loc>https://www.aigisss.com/blog/tags/postgis/</loc>
+    <loc>https://www.aigisss.com/blog/tags/gitlab/</loc>
     <lastmod>2021-09-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -656,13 +663,6 @@
   
   <url>
     <loc>https://www.aigisss.com/blog/tags/git/</loc>
-    <lastmod>2021-09-06</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.aigisss.com/blog/tags/gitlab/</loc>
     <lastmod>2021-09-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -746,14 +746,14 @@
   </url>
   
   <url>
-    <loc>https://www.aigisss.com/blog/tags/nginx/</loc>
+    <loc>https://www.aigisss.com/blog/tags/Javascript/</loc>
     <lastmod>2021-09-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://www.aigisss.com/blog/tags/Javascript/</loc>
+    <loc>https://www.aigisss.com/blog/tags/nginx/</loc>
     <lastmod>2021-09-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
