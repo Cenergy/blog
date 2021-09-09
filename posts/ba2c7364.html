@@ -229,7 +229,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      471 字
+      1.5k 字
     </span>
   
 
@@ -239,7 +239,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      4
+      16
        分钟
     </span>
   
@@ -281,7 +281,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：17 小时前
+                  本文最后更新于：4 分钟前
                 
               </p>
             
@@ -295,10 +295,31 @@
 <li><code>prototype</code>属性是函数独有的；</li>
 <li>上面说过JavaScript中函数也是对象的一种，那么函数同样也有属性<code>__proto__</code>、 <code>constructor</code>；</li>
 </ul>
-<h2 id="prototype属性"><a href="#prototype属性" class="headerlink" title="prototype属性"></a>prototype属性</h2><p>它是函数独有的属性，从图中可以看到它从一个函数指向另一个对象，代表这个对象是这个函数的原型对象，这个对象也是当前函数所创建的实例的原型对象。<br><code>prototype</code>设计之初就是为了实现继承，让由特定函数创建的所有实例共享属性和方法，也可以说是让某一个构造函数实例化的所有对象可以找到公共的方法和属性。有了<code>prototype</code>我们不需要为每一个实例创建重复的属性方法，而是将属性方法创建在构造函数的原型对象上（prototype）。那些不需要共享的才创建在构造函数中。<br>继续引用上面的代码，当我们想为通过Parent实例化的所有实例添加一个共享的属性时</p>
+<h2 id="prototype属性"><a href="#prototype属性" class="headerlink" title="prototype属性"></a>prototype属性</h2><p>它是函数独有的属性，从图中可以看到它从一个函数指向另一个对象，代表这个对象是这个函数的原型对象，这个对象也是当前函数所创建的实例的原型对象。<br><code>prototype</code>设计之初就是为了实现继承，让由特定函数创建的所有实例共享属性和方法，也可以说是让某一个构造函数实例化的所有对象可以找到公共的方法和属性。有了<code>prototype</code>我们不需要为每一个实例创建重复的属性方法，而是将属性方法创建在构造函数的原型对象上（prototype）。那些不需要共享的才创建在构造函数中。</p>
+<img src="/blog/posts/ba2c7364/323548351-1642fae65598fc65-16311798697453-16311798757894.png" srcset="/blog/img/loading.gif" lazyload class="" title="323548351-1642fae65598fc65">
+<p>继续引用上面的代码，当我们想为通过Parent实例化的所有实例添加一个共享的属性时</p>
 <figure class="highlight js"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs js">Parent.prototype.name = <span class="hljs-string">&quot;prototype&quot;</span>;<br></code></pre></div></td></tr></table></figure>
 <p>这就是原型属性，当然你也可以添加原型方法。</p>
-<h2 id="proto-属性"><a href="#proto-属性" class="headerlink" title="__proto__属性"></a><code>__proto__</code>属性</h2>
+<h2 id="proto-属性"><a href="#proto-属性" class="headerlink" title="__proto__属性"></a><code>__proto__</code>属性</h2><p><code>__proto__</code>属性是对象（包括函数）就有的属性。从图中可以看到<strong><code>__proto__</code>属性</strong>是从一个对象指向另一个对象，即<strong>从一个对象指向该对象的原型对象</strong>。显然它的含义就是告诉我们一个对象的原型对象是谁。<br>prototype篇章我们说到，<code>Parent.prototype</code>上添加的属性和方法叫做原型属性和原型方法，该构造函数的实例都可以访问调用。那这个构造函数的原型对象上的属性和方法，怎么能和构造函数的实例联系在一起呢，就是通过<code>__proto__</code>属性。每个对象都有<code>__proto__</code>属性，该属性指向的就是该对象的原型对象。</p>
+<img src="/blog/posts/ba2c7364/2678004328-ae93e0e517266b2a_fix732-16311800444655.png" srcset="/blog/img/loading.gif" lazyload class="" title="2678004328-ae93e0e517266b2a_fix732">
+<p><code>__proto__</code>通常称为隐式原型，<code>prototype</code>通常称为显式原型，那我们可以说一个对象的隐式原型指向了该对象的构造函数的显式原型。那么我们在显式原型上定义的属性方法，通过隐式原型传递给了构造函数的实例。这样一来实例就能很容易的访问到构造函数原型上的方法和属性了。<br>我们之前也说过<code>__proto__</code>属性是对象（包括函数）独有的，那么<code>Parent.prototype</code>也是对象，那它有隐式原型么？又指向谁？</p>
+<figure class="highlight js"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs js">Parent.prototype.__proto__ === <span class="hljs-built_in">Object</span>.prototype; <span class="hljs-comment">//true</span><br></code></pre></div></td></tr></table></figure>
+<p>可以看到，构造函数的原型对象上的隐式原型对象指向了Object的原型对象。那么Parent的原型对象就继承了Object的原型对象。由此我们可以验证一个结论，万物继承自Object.prototype。这也就是为什么我们可以实例化一个对象，并且可以调用该对象上没有的属性和方法了。如：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs javascript"><span class="hljs-comment">//我们并没有在Parent中定义任何方法属性，但是我们可以调用</span><br>p1.toString();<span class="hljs-comment">//hasOwnProperty 等等的一些方法</span><br></code></pre></div></td></tr></table></figure>
+<p>我们可以调用很多我们没有定义的方法，这些方法是哪来的呢？现在引出原型链的概念，当我们调用<code>p1.toString()</code>的时候，先在<code>p1</code>对象本身寻找，没有找到则通过<code>p1.__proto__</code>找到了原型对象<code>Parent.prototype</code>，也没有找到，又通过<code>Parent.prototype.__proto__</code>找到了上一层原型对象<code>Object.prototype</code>。在这一层找到了<code>toString</code>方法。返回该方法供<code>p1</code>使用。<br>当然如果找到<code>Object.prototype</code>上也没找到，就在<code>Object.prototype.__proto__</code>中寻找，但是<code>Object.prototype.__proto__ === null</code>所以就返回<code>undefined</code>。这就是为什么当访问对象中一个不存在的属性时，返回<code>undefined</code>了。</p>
+<h2 id="constructor属性"><a href="#constructor属性" class="headerlink" title="constructor属性"></a>constructor属性</h2><img src="/blog/posts/ba2c7364/48568374-4a2ca8b9a839496e_fix732-16311803210376.png" srcset="/blog/img/loading.gif" lazyload class="" title="48568374-4a2ca8b9a839496e_fix732">
+<p>constructor是对象才有的属性，从图中看到它是从一个对象指向一个函数的。指向的函数就是该对象的构造函数。每个对象都有构造函数，好比我们上面的代码<code>p1</code>就是一个对象，那<code>p1</code>的构造函数是谁呢？我们打印一下。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs javascript"><span class="hljs-built_in">console</span>.log(p1.constructor); <span class="hljs-comment">// ƒ Parent()&#123;&#125;</span><br></code></pre></div></td></tr></table></figure>
+<p>通过输出结果看到，很显然是Parent函数。我们有说过函数也是对象，那Parent函数是不是也有构造函数呢？显然是有的。再次打印下。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs javascript"><span class="hljs-built_in">console</span>.log(Parent.constructor); <span class="hljs-comment">// ƒ Function() &#123; [native code] &#125;</span><br></code></pre></div></td></tr></table></figure>
+<p>通过输出看到Parent函数的构造函数是Function()，这点也不奇怪，因为我们每次定义函数其实都是调用了new Function()，下面两种效果是一样的。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> fn1 = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Function</span>(<span class="hljs-string">&#x27;msg&#x27;</span>,<span class="hljs-string">&#x27;alert(msg)&#x27;</span>);<br><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">fn1</span>(<span class="hljs-params">msg</span>)</span>&#123;<br>    alert(msg);<br>&#125;<br></code></pre></div></td></tr></table></figure>
+<p>那么我们再回来看下，再次打印<code>Function.constructor</code></p>
+<figure class="highlight javascript"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs javascript"><span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">Function</span>.constructor); <span class="hljs-comment">// ƒ Function() &#123; [native code] &#125;</span><br><span class="hljs-built_in">Function</span>.constructor===<span class="hljs-built_in">Function</span> <span class="hljs-comment">//true</span><br></code></pre></div></td></tr></table></figure>
+<p>可以看到Function函数的构造函数就是本身了，那我们也就可以说Function是所有函数的根构造函数。<br>到这里我们已经对constructor属性有了一个初步的认识，它的作用是从一个对象指向一个函数，这个函数就是该对象的构造函数。通过栗子我们可以看到，<code>p1</code>的<code>constructor</code>属性指向了<code>Parent</code>，那么<code>Parent</code>就是<code>p1</code>的构造函数。同样<code>Parent</code>的<code>constructor</code>属性指向了<code>Function</code>，那么<code>Function</code>就是<code>Parent</code>的构造函数，然后又验证了<code>Function</code>就是根构造函数。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><img src="/blog/posts/ba2c7364/image-20210909175104199-16311810670437.png" srcset="/blog/img/loading.gif" lazyload class="" title="image-20210909175104199">
+<img src="/blog/posts/ba2c7364/image-20210909175134628-16311810962428.png" srcset="/blog/img/loading.gif" lazyload class="" title="image-20210909175134628">
+
             </div>
             <hr>
             <div>
